@@ -7,3 +7,12 @@ One of my biggest weaknesses is organization. If I don't stay on top of all of m
 
 ## Trello
 https://trello.com/b/6Yhv6ytl
+
+## Wireframes
+
+## Tech Stack
+This project uses a MEN stack
+	+ MongoDB
+	+ Express
+	+ node.js
+
