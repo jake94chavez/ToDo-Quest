@@ -4,3 +4,6 @@ ToDo-Quest is a gameified ToDo list that adds an rpg aspect to a regular ToDo li
 
 ## Motivation
 One of my biggest weaknesses is organization. If I don't stay on top of all of my tasks, I can lose track of things I need to do very quickly if I don't stay on top of it. I thought it would be fun to enhance a regular task manager with a gameified element. This kills two birds with one stone. It makes a ToDo list more interesting which will attract people that otherwise wouldn't use a ToDo list to start using one. On top of that, it adds another reason to complete the tasks you put on the list.
+
+## Trello
+https://trello.com/b/6Yhv6ytl
