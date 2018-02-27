@@ -9,8 +9,8 @@ One of my biggest weaknesses is organization. If I don't stay on top of all of m
 https://trello.com/b/6Yhv6ytl
 
 ## Wireframes
-![HomePage](../resources/ToDoQuestHomePage.png)
-![ProfilePage](../resources/ToDoQuestProfilePage.png)
+![HomePage](/resources/ToDoQuestHomePage.png)
+![ProfilePage](/resources/ToDoQuestProfilePage.png)
 
 ## Tech Stack
 This project uses a MEN stack
