@@ -14,9 +14,10 @@ https://trello.com/b/6Yhv6ytl
 
 ## Tech Stack
 This project uses a MEN stack
-	+ MongoDB
-	+ Express
-	+ node.js
+
++ MongoDB
++ Express
++ node.js
 
 ## Features
 This app features full CRUD capabilities. Users can Create, Update, and Delete ToDos. The page will read and display those todos on the list. The app also features a user account that will hold the data about a user including their personal ToDo list, their health points, and their experience.
