@@ -7,7 +7,7 @@ var UserSchema = new Schema ({
 		type: String,
 		minlength: 8,
 		maxlength:20
-	}
+	},
 	passwordDigest: String,
 	quests: [Quest.Schema]
 })

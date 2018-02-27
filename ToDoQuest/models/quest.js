@@ -18,3 +18,4 @@ var QuestScehma = new Schema ({
 
 var Quest = mongoose.model('Quest', QuestScehma);
 module.exports = Quest
+module.exports.Schema = QuestScehma
