@@ -6,8 +6,12 @@
  </a>
  </div>
 <ul class='nav navbar-nav pull-right'>
- <li display='style:inline'><a href='#'>Login</a></li>
- <li display='style:inline'><a href='#'>Signup</a></li>
+	<% if (locals.user) { %>
+		<li display='style:inline'><a href='#'>Profile</a></li>
+	<% } else { %>
+ 		<li display='style:inline'><a href='/login'>Login</a></li>
+ 		<li display='style:inline'><a href='/signup'>Signup</a></li>
+ 	<% } %>
  </ul>
 </div>
 </nav>

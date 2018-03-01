@@ -8,9 +8,14 @@ var mongoose = require('mongoose');
 var bcrypt = require('bcrypt');
 var session = require('express-session');
 
+var db = require('./models')
 
 var index = require('./routes/index');
 var users = require('./routes/users');
+var signup = require('./routes/signup');
+var login = require('./routes/login');
+var userexists = require('./routes/userexists')
+var api = require('./routes/api');
 
 var app = express();
 
@@ -32,49 +37,65 @@ app.use(session({secret: 'keyoard cat', cookie: {maxage: 60000}}));
 
 app.use('/', index);
 app.use('/users', users);
+app.use('/signup', signup);
+app.use('/login', login);
+app.use('/userexists', userexists)
 
 
 // bcrypt user handler
+var User = require('./models/user')
 app.post('/signup',
 	function(req, res){
 	let username = req.body.username;
-
-	bcrypt.hash(req.body.password, null, null, function(err, hash){
-		var user = new User({username:username, password:hash})
-		user.save().then(function(newUser){
-			console.log('Successfuly added '+username+' to the database!')
-			req.session.regenerate(function(){
-				res.redirect('/index');
-				req.session.user = user;
+	db.User.find({username: username}).then(function(found){
+		if (found.length > 0) {
+			res.redirect('/userexists')
+		} else {	
+			bcrypt.genSalt(10, function(err, salt) {
+				bcrypt.hash(req.body.password, salt, function(err, hash){
+					var user = new User({username:username, passwordDigest:hash})
+					user.save().then(function(newUser){
+						console.log('Successfuly added '+username+' to the database!')
+						req.session.regenerate(function(){
+							req.session.user = user;
+							console.log(req.session.user);
+							res.redirect('/')
+						})
+					})
+				});
 			})
-		})
-	});
+		}
+	})
 })
 
 app.post('/login',
-	function(req, res){
+	function(req, response){
 		let username = req.body.username;
 		let enteredPassword = req.body.password;
 
-		new User({username: username}).fetch().then(function(found){
-			if (found){
+		db.User.find({username: username}).then(function(found){
+			if (found.length > 0){
 				console.log('User\'s username was found in the databse!')
+				var user = found[0]
 
-				bcrypt.compare(enteredPassword, found.get('password'), function(err, res){
+				bcrypt.compare(enteredPassword, found[0].passwordDigest, function(err, res){
 					if (res){
 						req.session.regenerate(function(){
 							console.log('password matches! redirecting...')
-							response.redirect('/index')
+							req.session.user = user
+							console.log(req.session.user)
 							req.session.found = found.username;
+							console.log(req.session.found)
+							response.redirect('/')
 						});
 					} else {
 						console.log('password did not match... redirecting to signup');
-						res.redirect('/signup')
+						response.redirect('/signup')
 					}
 				})
 			} else {
 				console.log('username did not match... redirecting to signup');
-				res.redirect('/signup');
+				response.redirect('/signup');
 			}
 		})
 });

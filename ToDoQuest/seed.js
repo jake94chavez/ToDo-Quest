@@ -27,7 +27,7 @@ var questTest = [
 var userTest = [
 	{
 		username: 'SouthwestSauce',
-		passwordDigest: '',
+		passwordDigest: 'apple',
 		quests: [
 			{
 				todo: 'take out the trash',
@@ -36,7 +36,8 @@ var userTest = [
 				due: new Date()
 			}
 		]
-	}
+	},
+
 ];
 
 db.User.remove({}, function(err, users){
