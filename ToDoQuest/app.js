@@ -90,12 +90,12 @@ app.post('/login',
 						});
 					} else {
 						console.log('password did not match... redirecting to signup');
-						response.redirect('/signup')
+						response.redirect('/login')
 					}
 				})
 			} else {
 				console.log('username did not match... redirecting to signup');
-				response.redirect('/signup');
+				response.redirect('/login');
 			}
 		})
 });

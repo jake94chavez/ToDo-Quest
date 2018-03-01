@@ -35,7 +35,9 @@ var userTest = [
 				difficulty: 3,
 				due: new Date()
 			}
-		]
+		],
+		level: 0,
+		experience: 0
 	},
 
 ];

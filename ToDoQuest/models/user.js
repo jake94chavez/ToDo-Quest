@@ -9,6 +9,14 @@ var UserSchema = new Schema ({
 		maxlength:20
 	},
 	passwordDigest: String,
+	level: {
+		type: Number,
+		default: 0
+	},
+	experience: {
+		type: Number,
+		default: 0
+	},
 	quests: [Quest.Schema]
 })
 
