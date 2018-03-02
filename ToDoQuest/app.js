@@ -8,13 +8,15 @@ var mongoose = require('mongoose');
 var bcrypt = require('bcrypt');
 var session = require('express-session');
 
-var db = require('./models')
+var db = require('./models');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
 var signup = require('./routes/signup');
 var login = require('./routes/login');
-var userexists = require('./routes/userexists')
+var userexists = require('./routes/userexists');
+var profile = require('./routes/profile');
+var logout = require('./routes/logout');
 var api = require('./routes/api');
 
 var app = express();
@@ -40,6 +42,8 @@ app.use('/users', users);
 app.use('/signup', signup);
 app.use('/login', login);
 app.use('/userexists', userexists)
+app.use('/profile', profile)
+app.use('/logout', logout)
 
 
 // bcrypt user handler

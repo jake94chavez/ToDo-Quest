@@ -5,9 +5,8 @@
   	<% include ./partials/nav %>
     <h1><%= title %></h1>
     <% if (user != '') { %>
-    <p>Welcome to <%= title %> <%= user %>! 
+    <h4>Welcome to <%= title %> <%= user %>!</h4>
     <p>The date is <%= date %></p>
-    <p>You are currently level <%= level %></p>
     <% for(let i=0;i<quests.length;i++) { %>
     <div>
     	<p><%= quests[i].todo %></p>

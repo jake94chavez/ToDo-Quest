@@ -27,6 +27,12 @@ footer {
 	width:100%;
 }
 
+button {
+	position: fixed;
+	right: 20%;
+	bottom: 10%;
+}
+
 nav.navbar-inverse {
 	background-color: #397C2B;
 }

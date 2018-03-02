@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  	<% include ./partials/head %>
+  	<body>
+  	<% include ./partials/nav %>
+  	<h1><%= title %></h1>
+  	<h4>Hello brave <%= user %>! This is your profile page!</h4>
+  	<h4>Here is the information we have about you!</h4>
+  	<p>Your current level is <%= level %></p>
+  	<p>You currently have <%= experience %> xp</p>
+  	<a href='/logout'><button class='btn-danger'>Logout</button></a>
+ 	<% include ./partials/footer %>
+    <% include ./partials/scripts %>
+  </body>
+</html>
