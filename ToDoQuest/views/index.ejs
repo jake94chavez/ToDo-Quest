@@ -8,9 +8,12 @@
     <h4>Welcome to <%= title %> <%= user %>!</h4>
     <p>The date is <%= date %></p>
     <% for(let i=0;i<quests.length;i++) { %>
-    <div>
-    	<p><%= quests[i].todo %></p>
-    	<p><%= quests[i].difficulty %></p>
+    <div class='quest-container'>
+    	<div class='quest'>
+    		<p>Quest: <%= quests[i].todo %></p>
+    		<p>Difficulty: <%= quests[i].difficulty %></p>
+    		<p>Complete by: <%= quests[i].due %></p>
+    	</div>
     </div>
     <% } %>
     <% } else { %>

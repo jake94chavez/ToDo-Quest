@@ -33,6 +33,10 @@ button {
 	bottom: 10%;
 }
 
+div.quest-container {
+	margin-top: 30px;
+}
+
 nav.navbar-inverse {
 	background-color: #397C2B;
 }
