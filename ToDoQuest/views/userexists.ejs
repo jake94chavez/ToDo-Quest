@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
   	<% include ./partials/head %>
-  	<% include ./partials/nav %>
-    <title><%= title %></title>
   <body>
-    <h1>Sorry!</h1>
-    <p>It looks like someone already has that username! Go back to signup and choose a new one!</p>
+    <% include ./partials/nav %>
+    <h1><%= title %></h1>
+    <h2>Sorry!</h2>
+    <p>It looks like someone already has that username!</p>
+    <p>Go back to signup and choose a new one!</p>
     <% include ./partials/footer %>
     <% include ./partials/scripts %>
   </body>
