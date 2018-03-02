@@ -15,6 +15,27 @@
     		<p>Complete by: <%= quests[i].due %></p>
     	</div>
     </div>
+    <div class='form-container'>
+    	<h4>Accept a new quest!</h4>
+	    <form id='addNewQuest'>
+	    	<label>Quest</label>
+	    	<input type='text' placeholder='Take out the trash'>
+	    	<br>
+	    	<label>Importance out of 10</label>
+	    	<input type='number' min='0' max='10'>
+	    	<br>
+	    	<label>Difficulty out of 10</label>
+	    	<input type='number' min='0' max='10'>
+	    	<br>
+	    	<label>Complete by</label>
+	    	<input type='date'>
+	    	<br> 
+	    	at
+	    	<input type='time'>
+	    	<br>
+	    	<button id="submitButton" name="submitButton" class="btn btn-primary">Submit</button>
+	    </form>
+	</div>
     <% } %>
     <% } else { %>
     <p>Welcome to <%= title %>!</p>
@@ -22,5 +43,6 @@
     <% } %>
     <% include ./partials/footer %>
     <% include ./partials/scripts %>
+    <script src='javascripts/main.js' type='text/javascript'></script>
   </body>
 </html>

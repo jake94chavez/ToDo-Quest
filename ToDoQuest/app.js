@@ -41,9 +41,10 @@ app.use('/', index);
 app.use('/users', users);
 app.use('/signup', signup);
 app.use('/login', login);
-app.use('/userexists', userexists)
-app.use('/profile', profile)
-app.use('/logout', logout)
+app.use('/userexists', userexists);
+app.use('/profile', profile);
+app.use('/logout', logout);
+app.use('/api', api);
 
 
 // bcrypt user handler

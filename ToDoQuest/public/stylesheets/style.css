@@ -27,7 +27,7 @@ footer {
 	width:100%;
 }
 
-button {
+button#logout {
 	position: fixed;
 	right: 20%;
 	bottom: 10%;
@@ -39,6 +39,10 @@ div.quest-container {
 
 nav.navbar-inverse {
 	background-color: #397C2B;
+}
+
+div.form-container {
+	margin-top: 50px
 }
 
 .navbar-inverse .navbar-nav>li>a {
