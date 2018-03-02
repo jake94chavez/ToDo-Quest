@@ -1,8 +1,44 @@
+@font-face {
+	font-family: AdTime;
+	src: url(./fonts/Adventure-Time-Logo.ttf);
+}
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  text-align: center;
 }
 
 a {
   color: #00B7FF;
+}
+
+h1 {
+	font-family: AdTime, Helvetica, Arial, sans-serif;
+	font-size: 65px;
+	color: #72ABAA;
+}
+
+
+footer {
+	position: fixed;
+	left:0px;
+	bottom:0px;
+	height:30px;
+	width:100%;
+}
+
+nav.navbar-inverse {
+	background-color: #397C2B;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+	color: #8EE1C2;
+}
+
+.navbar-inverse .navbar-brand {
+    color: #CAFCCE;
+}
+
+#stay-small {
+
 }

@@ -4,8 +4,20 @@
   <body>
   	<% include ./partials/nav %>
     <h1><%= title %></h1>
-    <p>Welcome to <%= title %> <%= user %></p>
+    <% if (user != '') { %>
+    <p>Welcome to <%= title %> <%= user %>! 
     <p>The date is <%= date %></p>
+    <p>You are currently level <%= level %></p>
+    <% for(let i=0;i<quests.length;i++) { %>
+    <div>
+    	<p><%= quests[i].todo %></p>
+    	<p><%= quests[i].difficulty %></p>
+    </div>
+    <% } %>
+    <% } else { %>
+    <p>Welcome to <%= title %>!</p>
+    <p>Login or Signup to begin!</p>
+    <% } %>
     <% include ./partials/footer %>
     <% include ./partials/scripts %>
   </body>

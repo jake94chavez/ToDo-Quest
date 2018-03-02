@@ -83,9 +83,7 @@ app.post('/login',
 						req.session.regenerate(function(){
 							console.log('password matches! redirecting...')
 							req.session.user = user
-							console.log(req.session.user)
 							req.session.found = found.username;
-							console.log(req.session.found)
 							response.redirect('/')
 						});
 					} else {

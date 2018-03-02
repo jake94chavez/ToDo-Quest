@@ -11,7 +11,7 @@ var UserSchema = new Schema ({
 	passwordDigest: String,
 	level: {
 		type: Number,
-		default: 0
+		default: 1
 	},
 	experience: {
 		type: Number,
